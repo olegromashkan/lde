@@ -30,9 +30,13 @@
             transition: transform 0.2s ease-in-out;
         }
         .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Courier+Delivery');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             background-size: cover;
             background-position: center;
+        }
+        .modal-box {
+            max-width: 600px;
+            width: 90%;
         }
     </style>
 </head>
@@ -80,7 +84,7 @@
             <div class="max-w-2xl">
                 <h1 class="text-5xl font-bold">Delivery Options</h1>
                 <p class="py-6 text-lg">Choose how your packages are delivered with our flexible and reliable options across Chisinau and Moldova.</p>
-                <a class="btn btn-courier-orange" href="order.html">Order Now</a>
+                <a class="btn btn-courier-orange" data-tariff="Same-Day Express" onclick="openModal(this)">Order Now</a>
             </div>
         </div>
     </section>
@@ -106,7 +110,7 @@
                             <li>Available in Chisinau only</li>
                         </ul>
                         <div class="card-actions justify-end mt-4">
-                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                            <button class="btn btn-courier-orange" data-tariff="Same-Day Express" onclick="openModal(this)">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -125,7 +129,7 @@
                             <li>Chisinau city limits</li>
                         </ul>
                         <div class="card-actions justify-end mt-4">
-                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                            <button class="btn btn-courier-orange" data-tariff="Standard Delivery" onclick="openModal(this)">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -144,7 +148,7 @@
                             <li>Tracking included</li>
                         </ul>
                         <div class="card-actions justify-end mt-4">
-                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                            <button class="btn btn-courier-orange" data-tariff="Intercity Delivery" onclick="openModal(this)">Order Now</button>
                         </div>
                     </div>
                 </div>
@@ -163,13 +167,73 @@
                             <li>Perfect for businesses</li>
                         </ul>
                         <div class="card-actions justify-end mt-4">
-                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                            <button class="btn btn-courier-orange" data-tariff="Scheduled Delivery" onclick="openModal(this)">Order Now</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Modal for Order Form -->
+    <div class="modal" id="orderModal">
+        <div class="modal-box bg-white p-6 rounded-lg shadow-xl">
+            <h3 class="text-2xl font-bold text-courier-blue mb-4">Place Your Delivery Order</h3>
+            <form id="orderForm">
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Full Name *</span>
+                    </label>
+                    <input type="text" id="name" placeholder="John Doe" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Email *</span>
+                    </label>
+                    <input type="email" id="email" placeholder="example@domain.com" class="input input-bordered w-full" required />
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Phone Number *</span>
+                    </label>
+                    <input type="tel" id="phone" placeholder="+373 69 123 456" class="input input-bordered w-full" required pattern="\+373[0-9]{8}" title="Please enter a valid Moldovan phone number (e.g., +37369123456)" />
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Pickup Address *</span>
+                    </label>
+                    <textarea id="pickupAddress" placeholder="Street, City, Postal Code" class="textarea textarea-bordered w-full" required></textarea>
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Delivery Address *</span>
+                    </label>
+                    <textarea id="deliveryAddress" placeholder="Street, City, Postal Code" class="textarea textarea-bordered w-full" required></textarea>
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Delivery Tariff *</span>
+                    </label>
+                    <select id="tariff" class="select select-bordered w-full" required>
+                        <option value="Same-Day Express">Same-Day Express</option>
+                        <option value="Standard Delivery">Standard Delivery</option>
+                        <option value="Intercity Delivery">Intercity Delivery</option>
+                        <option value="Scheduled Delivery">Scheduled Delivery</option>
+                    </select>
+                </div>
+                <div class="form-control mb-4">
+                    <label class="label">
+                        <span class="label-text text-gray-700">Additional Notes</span>
+                    </label>
+                    <textarea id="notes" placeholder="Any special instructions?" class="textarea textarea-bordered w-full"></textarea>
+                </div>
+                <div class="modal-action">
+                    <button type="submit" class="btn btn-courier-orange">Submit Order</button>
+                    <button type="button" class="btn btn-ghost" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer footer-center p-10 bg-courier-blue text-white">
@@ -180,9 +244,88 @@
         </div>
     </footer>
 
-    <!-- JavaScript for interactivity -->
+    <!-- JavaScript for Modal and Form Handling -->
     <script>
-        // No dynamic interactivity required for this page
+        const modal = document.getElementById('orderModal');
+        const form = document.getElementById('orderForm');
+        const tariffSelect = document.getElementById('tariff');
+
+        function openModal(button) {
+            const tariff = button.getAttribute('data-tariff');
+            tariffSelect.value = tariff; // Pre-select the tariff
+            modal.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            modal.classList.remove('modal-open');
+            form.reset(); // Clear form inputs
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Get form values
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const pickupAddress = document.getElementById('pickupAddress').value.trim();
+            const deliveryAddress = document.getElementById('deliveryAddress').value.trim();
+            const tariff = tariffSelect.value;
+            const notes = document.getElementById('notes').value.trim();
+
+            // Basic validation
+            if (!name || !email || !phone || !pickupAddress || !deliveryAddress || !tariff) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            if (!phone.match(/\+373[0-9]{8}/)) {
+                alert('Please enter a valid Moldovan phone number (e.g., +37369123456).');
+                return;
+            }
+
+            // Create email body
+            const emailBody = `
+RapidMobil Delivery Order
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Pickup Address: ${pickupAddress}
+Delivery Address: ${deliveryAddress}
+Tariff: ${tariff}
+${notes ? `Additional Notes: ${notes}` : ''}
+
+Thank you for choosing RapidMobil! We will contact you soon to confirm your order.
+            `.trim();
+
+            // Encode email body for mailto
+            const encodedBody = encodeURIComponent(emailBody);
+            const mailtoLink = `mailto:info@rapidmobil.md?cc=${encodeURIComponent(email)}&subject=${encodeURIComponent('RapidMobil Delivery Order')}&body=${encodedBody}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Close modal and reset form
+            closeModal();
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('modal-open')) {
+                closeModal();
+            }
+        });
     </script>
 </body>
 </html>
