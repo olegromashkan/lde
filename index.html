@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RapidMobil - Courier Services</title>
+    <!-- Tailwind CSS with DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Heroicons for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/dist/heroicons.min.js"></script>
+    <style>
+       
+        .bg-courier-blue {
+            background-color: #1E40AF; /* Vibrant blue for headers/footers */
+        }
+        .text-courier-orange {
+            color: #F97316; /* Orange for accents */
+        }
+        .btn-courier-orange {
+            background-color: #F97316;
+            color: white;
+            border: none;
+        }
+        .btn-courier-orange:hover {
+            background-color: #EA580C;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.2s ease-in-out;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Courier+Delivery');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="navbar bg-courier-blue text-white sticky top-0 z-50 shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 text-white rounded-box w-52">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tariffs.html">Tariffs</a></li>
+                    <li><a href="order.html">Order Delivery</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-2xl font-bold" href="index.html">
+                <span class="text-courier-orange">Rapid</span>Mobil
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a href="index.html" class="hover:text-courier-orange">Home</a></li>
+                <li><a href="services.html" class="hover:text-courier-orange">Services</a></li>
+                <li><a href="tariffs.html" class="hover:text-courier-orange">Tariffs</a></li>
+                <li><a href="order.html" class="hover:text-courier-orange">Order Delivery</a></li>
+                <li><a href="contact.html" class="hover:text-courier-orange">Contacts</a></li>
+                <li><a href="about.html" class="hover:text-courier-orange">About</a></li>
+                <li><a href="faq.html" class="hover:text-courier-orange">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-courier-orange" href="order.html">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-[50vh] hero-bg text-white">
+        <div class="hero-content text-center">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold">RapidMobil</h1>
+                <p class="py-6 text-lg">Fast and reliable courier services in Chisinau and across Moldova. Your packages, delivered with speed and care.</p>
+                <a class="btn btn-courier-orange" href="order.html">Order Delivery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <main class="container mx-auto p-4">
+        <section class="my-12">
+            <h2 class="text-4xl font-bold text-center mb-8 text-courier-blue">Why Choose RapidMobil?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Speed -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            <h3 class="card-title text-courier-blue">Speed</h3>
+                        </div>
+                        <p>Express delivery within Chisinau in just hours, ensuring your packages arrive on time.</p>
+                    </div>
+                </div>
+                <!-- Reliability -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h3 class="card-title text-courier-blue">Reliability</h3>
+                        </div>
+                        <p>Your packages are handled with care and delivered securely to their destination.</p>
+                    </div>
+                </div>
+                <!-- Convenience -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h3 class="card-title text-courier-blue">Convenience</h3>
+                        </div>
+                        <p>Order online anytime with our easy-to-use delivery request form.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-courier-blue text-white">
+        <div>
+            <p class="text-lg font-bold">RapidMobil - Delivering Speed, Ensuring Trust</p>
+            <p>Contact: +373 69 123 456 | <a href="mailto:info@rapidmobil.md" class="hover:text-courier-orange">info@rapidmobil.md</a></p>
+            <p>Chisinau, Moldova</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Add any page-specific JS here if needed
+        // Currently, no dynamic interactivity is required for this page
+    </script>
+</body>
+</html>

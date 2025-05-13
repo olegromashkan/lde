@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariffs - RapidMobil</title>
+    <!-- Tailwind CSS with DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Heroicons for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/dist/heroicons.min.js"></script>
+    <style>
+        /* Custom courier-themed styles */
+        body {
+            font-family: 'Inter', 'sans-serif';
+            font-weight: 500;
+        }
+        .bg-courier-blue {
+            background-color: #1E40AF; /* Vibrant blue for headers/footers */
+        }
+        .text-courier-orange {
+            color: #F97316; /* Orange for accents */
+        }
+        .btn-courier-orange {
+            background-color: #F97316;
+            color: white;
+            border: none;
+        }
+        .btn-courier-orange:hover {
+            background-color: #EA580C;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.2s ease-in-out;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Courier+Delivery');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="navbar bg-courier-blue text-white sticky top-0 z-50 shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 text-white rounded-box w-52">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tariffs.html">Tariffs</a></li>
+                    <li><a href="order.html">Order Delivery</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-2xl font-bold" href="index.html">
+                <span class="text-courier-orange">Rapid</span>Mobil
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a href="index.html" class="hover:text-courier-orange">Home</a></li>
+                <li><a href="services.html" class="hover:text-courier-orange">Services</a></li>
+                <li><a href="tariffs.html" class="hover:text-courier-orange">Tariffs</a></li>
+                <li><a href="order.html" class="hover:text-courier-orange">Order Delivery</a></li>
+                <li><a href="contact.html" class="hover:text-courier-orange">Contacts</a></li>
+                <li><a href="about.html" class="hover:text-courier-orange">About</a></li>
+                <li><a href="faq.html" class="hover:text-courier-orange">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-courier-orange" href="order.html">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-[50vh] hero-bg text-white">
+        <div class="hero-content text-center">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold">Our Tariffs</h1>
+                <p class="py-6 text-lg">Explore our clear and competitive pricing for courier services in Chisinau and across Moldova. Start your delivery today!</p>
+                <a class="btn btn-courier-orange" href="order.html">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tariffs Content -->
+    <main class="container mx-auto p-4">
+        <section class="my-12">
+            <h2 class="text-4xl font-bold text-center mb-8 text-courier-blue">Courier Service Pricing</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12 text-gray-700">Our tariffs are designed to be transparent and affordable, with no hidden fees. Prices include pickup and delivery.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Standard Delivery in Chisinau -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+                            <h2 class="card-title text-courier-blue">Standard Delivery (Chisinau)</h2>
+                        </div>
+                        <p class="text-gray-700">Reliable delivery within Chisinau, ideal for documents and parcels.</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-700">
+                            <li>Up to 20 kg</li>
+                            <li>Within 24 hours</li>
+                            <li>50 MDL base + 2 MDL/kg</li>
+                        </ul>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Express Delivery in Chisinau -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            <h2 class="card-title text-courier-blue">Express Delivery (Chisinau)</h2>
+                        </div>
+                        <p class="text-gray-700">Urgent same-day delivery for time-sensitive shipments.</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-700">
+                            <li>Up to 10 kg</li>
+                            <li>Within 3-4 hours</li>
+                            <li>100 MDL base + 5 MDL/kg</li>
+                        </ul>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delivery Across Moldova -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7.618V20zM15 20l5.447-2.724A1 1 0 0021 16.382V5.618a1 1 0 00-1.447-.894L15 7.618V20z" /></svg>
+                            <h2 class="card-title text-courier-blue">Delivery Across Moldova</h2>
+                        </div>
+                        <p class="text-gray-700">Reliable intercity delivery to Balti, Cahul, Tiraspol, and more.</p>
+                        <ul class="list-disc pl-5 mt-2 text-gray-700">
+                            <li>Up to 50 kg</li>
+                            <li>1-2 days</li>
+                            <li>150 MDL base + 3 MDL/kg</li>
+                        </ul>
+                        <div class="card-actions justify-end mt-4">
+                            <a href="order.html" class="btn btn-courier-orange">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Additional Services Pricing -->
+        <section class="my-12">
+            <h2 class="text-3xl font-bold text-center mb-8 text-courier-blue">Additional Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10l-8-4m8 4v10l-8-4" /></svg>
+                            <h3 class="card-title text-courier-blue">Packaging</h3>
+                        </div>
+                        <p class="text-gray-700">Small: 20 MDL<br>Large: 50 MDL</p>
+                    </div>
+                </div>
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h3 class="card-title text-courier-blue">Insurance</h3>
+                        </div>
+                        <p class="text-gray-700">1% of declared value (min. 10 MDL)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-courier-blue text-white">
+        <div>
+            <p class="text-lg font-bold">RapidMobil - Delivering Speed, Ensuring Trust</p>
+            <p>Contact: +373 69 123 456 | <a href="mailto:info@rapidmobil.md" class="hover:text-courier-orange">info@rapidmobil.md</a></p>
+            <p>Chisinau, Moldova</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Add any page-specific JS here if needed
+        // Currently, no dynamic interactivity is required for this page
+    </script>
+</body>
+</html>

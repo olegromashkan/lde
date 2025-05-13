@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - RapidMobil</title>
+    <!-- Tailwind CSS with DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Heroicons for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/heroicons@2.0.18/dist/heroicons.min.js"></script>
+    <style>
+        /* Custom courier-themed styles */
+        body {
+            font-family: 'Inter', 'sans-serif';
+            font-weight: 500;
+        }
+        .bg-courier-blue {
+            background-color: #1E40AF; /* Vibrant blue for headers/footers */
+        }
+        .text-courier-orange {
+            color: #F97316; /* Orange for accents */
+        }
+        .btn-courier-orange {
+            background-color: #F97316;
+            color: white;
+            border: none;
+        }
+        .btn-courier-orange:hover {
+            background-color: #EA580C;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.2s ease-in-out;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x400?text=Courier+Delivery');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <header class="navbar bg-courier-blue text-white sticky top-0 z-50 shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-gray-800 text-white rounded-box w-52">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="tariffs.html">Tariffs</a></li>
+                    <li><a href="order.html">Order Delivery</a></li>
+                    <li><a href="contact.html">Contacts</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <a class="btn btn-ghost text-2xl font-bold" href="index.html">
+                <span class="text-courier-orange">Rapid</span>Mobil
+            </a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-lg">
+                <li><a href="index.html" class="hover:text-courier-orange">Home</a></li>
+                <li><a href="services.html" class="hover:text-courier-orange">Services</a></li>
+                <li><a href="tariffs.html" class="hover:text-courier-orange">Tariffs</a></li>
+                <li><a href="order.html" class="hover:text-courier-orange">Order Delivery</a></li>
+                <li><a href="contact.html" class="hover:text-courier-orange">Contacts</a></li>
+                <li><a href="about.html" class="hover:text-courier-orange">About</a></li>
+                <li><a href="faq.html" class="hover:text-courier-orange">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <a class="btn btn-courier-orange" href="order.html">Order Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero min-h-[50vh] hero-bg text-white">
+        <div class="hero-content text-center">
+            <div class="max-w-2xl">
+                <h1 class="text-5xl font-bold">About RapidMobil</h1>
+                <p class="py-6 text-lg">Discover our story and commitment to delivering your packages with speed and reliability across Moldova.</p>
+                <a class="btn btn-courier-orange" href="order.html">Order Delivery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <main class="container mx-auto p-4">
+        <section class="my-12">
+            <h2 class="text-4xl font-bold text-center mb-8 text-courier-blue">Our Story</h2>
+            <div class="prose max-w-4xl mx-auto text-gray-700">
+                <p>RapidMobil was founded in 2018 with a vision to revolutionize courier services in Moldova. Starting as a small operation in Chisinau, we quickly grew to serve major cities like Balti, Cahul, Tiraspol, and Comrat, driven by our commitment to speed, reliability, and customer satisfaction.</p>
+                <p>Today, RapidMobil is a trusted name in logistics, offering a range of services from express deliveries within hours to intercity shipments across Moldova. Our team of dedicated couriers and advanced tracking systems ensure your packages arrive safely and on time.</p>
+            </div>
+        </section>
+
+        <section class="my-12">
+            <h2 class="text-4xl font-bold text-center mb-8 text-courier-blue">Our Mission</h2>
+            <div class="prose max-w-4xl mx-auto text-gray-700">
+                <p>At RapidMobil, our mission is to provide fast, reliable, and affordable courier services that connect people and businesses across Moldova. We strive to exceed customer expectations by combining cutting-edge technology with a customer-first approach, ensuring every delivery is handled with care.</p>
+            </div>
+        </section>
+
+        <section class="my-12">
+            <h2 class="text-4xl font-bold text-center mb-8 text-courier-blue">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <!-- Reliability -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <h3 class="card-title text-courier-blue">Reliability</h3>
+                        </div>
+                        <p>We deliver on our promises, ensuring your packages arrive safely and on schedule.</p>
+                    </div>
+                </div>
+                <!-- Speed -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            <h3 class="card-title text-courier-blue">Speed</h3>
+                        </div>
+                        <p>Our express services get your packages to their destination in hours, not days.</p>
+                    </div>
+                </div>
+                <!-- Customer Focus -->
+                <div class="card bg-white shadow-xl border border-gray-200">
+                    <div class="card-body">
+                        <div class="flex items-center gap-2 mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-courier-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+                            <h3 class="card-title text-courier-blue">Customer Focus</h3>
+                        </div>
+                        <p>Your satisfaction is our priority, with easy ordering and responsive support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-courier-blue text-white">
+        <div>
+            <p class="text-lg font-bold">RapidMobil - Delivering Speed, Ensuring Trust</p>
+            <p>Contact: +373 69 123 456 | <a href="mailto:info@rapidmobil.md" class="hover:text-courier-orange">info@rapidmobil.md</a></p>
+            <p>Chisinau, Moldova</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Add any page-specific JS here if needed
+        // Currently, no dynamic interactivity is required for this page
+    </script>
+</body>
+</html>
